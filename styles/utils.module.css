@@ -25,6 +25,10 @@
   line-height: 1.5;
 }
 
+.headingBold {
+  font-weight: 700;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
