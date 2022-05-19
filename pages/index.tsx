@@ -5,7 +5,15 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 
-export default function Home({ allPostsData }) {
+interface Props {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}
+
+export default function Home({ allPostsData }: Props) {
   return (
     <Layout home>
       <Head>
@@ -13,8 +21,9 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hello 👋🏾, I'm <bold className={utilStyles.headingBold}>Khethelo</bold>
-          . I work as Software Engineer You can contact me on{" "}
+          Hello 👋🏾, I'm <span className={utilStyles.headingBold}>Khethelo</span>
+          . I work as Software Engineer. I focus on Web and Mobile Development.
+          You can contact me on{" "}
           <Link href="https://instagram.com/khetman_">
             <a target="_blank">Instagram</a>
           </Link>
